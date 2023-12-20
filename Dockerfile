@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 RUN wget https://project-downloads.drogon.net/wiringpi-latest.deb 
 RUN sudo dpkg -i wiringpi-latest.deb
 
-ADD raspberry-remote /remote/raspberry-remote
+ADD remote /remote/raspberry-remote
 ADD cron /remote/cron
 ADD webinterface /var/www/html/
 
