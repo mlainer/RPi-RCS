@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
-ADD WiringPi /remote/WiringPi
-RUN dpkg -i /remote/WiringPi/debian-template/wiringpi_3.14_arm64.deb
+ADD debian-template /remote/debian-template
+RUN dpkg -i /remote/debian-template/wiringpi_3.14_arm64.deb
 
 ADD remote /remote/raspberry-remote
 ADD cron /remote/cron
